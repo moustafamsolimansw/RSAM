@@ -13,3 +13,4 @@ E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.Application.dll
 E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\refint\RSAM.Application.dll
 E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.Application.pdb
 E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\ref\RSAM.Application.dll
+E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.Application.sourcelink.json

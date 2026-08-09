@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "E:\\Projects\\RSAM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7A2A42E3-D2A4-D58F-C9D1-6A8E10B0CF3A}|RSAM.Api\\RSAM.Api.csproj|e:\\projects\\rsam\\rsam.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7A2A42E3-D2A4-D58F-C9D1-6A8E10B0CF3A}|RSAM.Api\\RSAM.Api.csproj|solutionrelative:rsam.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A4743929-D6B0-2EF7-ECF1-7AEB2004570F}|RSAM.Infrastructure\\RSAM.Infrastructure.csproj|e:\\projects\\rsam\\rsam.infrastructure\\auth\\services\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4743929-D6B0-2EF7-ECF1-7AEB2004570F}|RSAM.Infrastructure\\RSAM.Infrastructure.csproj|solutionrelative:rsam.infrastructure\\auth\\services\\jwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7A2A42E3-D2A4-D58F-C9D1-6A8E10B0CF3A}|RSAM.Api\\RSAM.Api.csproj|e:\\projects\\rsam\\rsam.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A2A42E3-D2A4-D58F-C9D1-6A8E10B0CF3A}|RSAM.Api\\RSAM.Api.csproj|solutionrelative:rsam.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A4743929-D6B0-2EF7-ECF1-7AEB2004570F}|RSAM.Infrastructure\\RSAM.Infrastructure.csproj|e:\\projects\\rsam\\rsam.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4743929-D6B0-2EF7-ECF1-7AEB2004570F}|RSAM.Infrastructure\\RSAM.Infrastructure.csproj|solutionrelative:rsam.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81B82941-0630-6D3B-710E-32873839CC92}|RSAM.Application\\RSAM.Application.csproj|e:\\projects\\rsam\\rsam.application\\auth\\interfaces\\ijwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81B82941-0630-6D3B-710E-32873839CC92}|RSAM.Application\\RSAM.Application.csproj|solutionrelative:rsam.application\\auth\\interfaces\\ijwttokengenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|e:\\projects\\rsam\\rsam.domain\\userar\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|solutionrelative:rsam.domain\\userar\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|e:\\projects\\rsam\\rsam.domain\\userar\\valueobjects\\userid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|solutionrelative:rsam.domain\\userar\\valueobjects\\userid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|e:\\projects\\rsam\\rsam.domain\\sharedmodels\\aggregateroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|solutionrelative:rsam.domain\\sharedmodels\\aggregateroot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|e:\\projects\\rsam\\rsam.domain\\sharedmodels\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|solutionrelative:rsam.domain\\sharedmodels\\entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|e:\\projects\\rsam\\rsam.domain\\sharedmodels\\idomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|solutionrelative:rsam.domain\\sharedmodels\\idomainevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|e:\\projects\\rsam\\rsam.domain\\sharedmodels\\valueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E2E0A34-0AFB-5469-8C2C-2A21D0EE6BDF}|RSAM.Domain\\RSAM.Domain.csproj|solutionrelative:rsam.domain\\sharedmodels\\valueobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,28 +70,119 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "E:\\Projects\\RSAM\\RSAM.Api\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "RSAM.Api\\Properties\\launchSettings.json",
-              "ToolTip": "E:\\Projects\\RSAM\\RSAM.Api\\Properties\\launchSettings.json",
-              "RelativeToolTip": "RSAM.Api\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-08-09T10:16:09.289Z",
+              "DocumentIndex": 1,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "E:\\Projects\\RSAM\\RSAM.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "RSAM.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "E:\\Projects\\RSAM\\RSAM.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "RSAM.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-09T13:56:03.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Projects\\RSAM\\RSAM.Api\\Program.cs",
-              "RelativeDocumentMoniker": "RSAM.Api\\Program.cs",
-              "ToolTip": "E:\\Projects\\RSAM\\RSAM.Api\\Program.cs",
-              "RelativeToolTip": "RSAM.Api\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "JwtTokenGenerator.cs",
+              "DocumentMoniker": "E:\\Projects\\RSAM\\RSAM.Infrastructure\\Auth\\Services\\JwtTokenGenerator.cs",
+              "RelativeDocumentMoniker": "RSAM.Infrastructure\\Auth\\Services\\JwtTokenGenerator.cs",
+              "ToolTip": "E:\\Projects\\RSAM\\RSAM.Infrastructure\\Auth\\Services\\JwtTokenGenerator.cs",
+              "RelativeToolTip": "RSAM.Infrastructure\\Auth\\Services\\JwtTokenGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-09T10:15:38.314Z",
+              "WhenOpened": "2026-08-09T13:55:39.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserId.cs",
+              "DocumentMoniker": "E:\\Projects\\RSAM\\RSAM.Domain\\UserAR\\ValueObjects\\UserId.cs",
+              "RelativeDocumentMoniker": "RSAM.Domain\\UserAR\\ValueObjects\\UserId.cs",
+              "ToolTip": "E:\\Projects\\RSAM\\RSAM.Domain\\UserAR\\ValueObjects\\UserId.cs",
+              "RelativeToolTip": "RSAM.Domain\\UserAR\\ValueObjects\\UserId.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-09T13:47:31.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\Projects\\RSAM\\RSAM.Domain\\UserAR\\User.cs",
+              "RelativeDocumentMoniker": "RSAM.Domain\\UserAR\\User.cs",
+              "ToolTip": "E:\\Projects\\RSAM\\RSAM.Domain\\UserAR\\User.cs",
+              "RelativeToolTip": "RSAM.Domain\\UserAR\\User.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAswCkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-09T13:47:08.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AggregateRoot.cs",
+              "DocumentMoniker": "E:\\Projects\\RSAM\\RSAM.Domain\\SharedModels\\AggregateRoot.cs",
+              "RelativeDocumentMoniker": "RSAM.Domain\\SharedModels\\AggregateRoot.cs",
+              "ToolTip": "E:\\Projects\\RSAM\\RSAM.Domain\\SharedModels\\AggregateRoot.cs",
+              "RelativeToolTip": "RSAM.Domain\\SharedModels\\AggregateRoot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-09T13:45:13.74Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IDomainEvent.cs",
+              "DocumentMoniker": "E:\\Projects\\RSAM\\RSAM.Domain\\SharedModels\\IDomainEvent.cs",
+              "RelativeDocumentMoniker": "RSAM.Domain\\SharedModels\\IDomainEvent.cs",
+              "ToolTip": "E:\\Projects\\RSAM\\RSAM.Domain\\SharedModels\\IDomainEvent.cs",
+              "RelativeToolTip": "RSAM.Domain\\SharedModels\\IDomainEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-09T13:43:24.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Entity.cs",
+              "DocumentMoniker": "E:\\Projects\\RSAM\\RSAM.Domain\\SharedModels\\Entity.cs",
+              "RelativeDocumentMoniker": "RSAM.Domain\\SharedModels\\Entity.cs",
+              "ToolTip": "E:\\Projects\\RSAM\\RSAM.Domain\\SharedModels\\Entity.cs",
+              "RelativeToolTip": "RSAM.Domain\\SharedModels\\Entity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-09T13:40:53.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ValueObject.cs",
+              "DocumentMoniker": "E:\\Projects\\RSAM\\RSAM.Domain\\SharedModels\\ValueObject.cs",
+              "RelativeDocumentMoniker": "RSAM.Domain\\SharedModels\\ValueObject.cs",
+              "ToolTip": "E:\\Projects\\RSAM\\RSAM.Domain\\SharedModels\\ValueObject.cs",
+              "RelativeToolTip": "RSAM.Domain\\SharedModels\\ValueObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-09T13:34:30.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IJwtTokenGenerator.cs",
+              "DocumentMoniker": "E:\\Projects\\RSAM\\RSAM.Application\\Auth\\Interfaces\\IJwtTokenGenerator.cs",
+              "RelativeDocumentMoniker": "RSAM.Application\\Auth\\Interfaces\\IJwtTokenGenerator.cs",
+              "ToolTip": "E:\\Projects\\RSAM\\RSAM.Application\\Auth\\Interfaces\\IJwtTokenGenerator.cs",
+              "RelativeToolTip": "RSAM.Application\\Auth\\Interfaces\\IJwtTokenGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-09T13:33:27.045Z",
               "EditorCaption": ""
             }
           ]

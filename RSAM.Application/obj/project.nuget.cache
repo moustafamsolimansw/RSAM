@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4NWcvPqSNHU=",
+  "dgSpecHash": "p9yoYhg7Kz0=",
   "success": true,
   "projectFilePath": "E:\\Projects\\RSAM\\RSAM.Application\\RSAM.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mo.ahmed\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.10\\microsoft.extensions.dependencyinjection.abstractions.10.0.10.nupkg.sha512"
+  ],
   "logs": []
 }

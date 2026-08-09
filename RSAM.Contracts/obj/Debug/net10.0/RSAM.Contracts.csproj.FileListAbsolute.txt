@@ -9,3 +9,4 @@ E:\Projects\RSAM\RSAM.Contracts\obj\Debug\net10.0\RSAM.Contracts.dll
 E:\Projects\RSAM\RSAM.Contracts\obj\Debug\net10.0\refint\RSAM.Contracts.dll
 E:\Projects\RSAM\RSAM.Contracts\obj\Debug\net10.0\RSAM.Contracts.pdb
 E:\Projects\RSAM\RSAM.Contracts\obj\Debug\net10.0\ref\RSAM.Contracts.dll
+E:\Projects\RSAM\RSAM.Contracts\obj\Debug\net10.0\RSAM.Contracts.sourcelink.json

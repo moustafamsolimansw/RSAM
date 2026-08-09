@@ -43,3 +43,10 @@ E:\Projects\RSAM\RSAM.Api\obj\Debug\net10.0\ref\RSAM.Api.dll
 E:\Projects\RSAM\RSAM.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
 E:\Projects\RSAM\RSAM.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\Projects\RSAM\RSAM.Api\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Projects\RSAM\RSAM.Api\obj\Debug\net10.0\RSAM.Api.sourcelink.json
+E:\Projects\RSAM\RSAM.Api\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+E:\Projects\RSAM\RSAM.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Projects\RSAM\RSAM.Api\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Projects\RSAM\RSAM.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+E:\Projects\RSAM\RSAM.Api\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+E:\Projects\RSAM\RSAM.Api\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll

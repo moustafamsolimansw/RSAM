@@ -15,3 +15,4 @@ E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Infrastructure.dll
 E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\refint\RSAM.Infrastructure.dll
 E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Infrastructure.pdb
 E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\ref\RSAM.Infrastructure.dll
+E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Infrastructure.sourcelink.json

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RSAM.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70bc2a8a7fc939e69eb0742c294153db500103d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("RSAM.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RSAM.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
