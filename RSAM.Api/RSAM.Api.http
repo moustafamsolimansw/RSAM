@@ -1,0 +1,6 @@
+@RSAM.Api_HostAddress = http://localhost:5134
+
+GET {{RSAM.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

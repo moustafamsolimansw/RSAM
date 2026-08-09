@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="RSAM.Api/RSAM.Api.csproj" />
+  <Project Path="RSAM.Application/RSAM.Application.csproj" />
+  <Project Path="RSAM.Contracts/RSAM.Contracts.csproj" />
+  <Project Path="RSAM.Domain/RSAM.Domain.csproj" />
+  <Project Path="RSAM.Infrastructure/RSAM.Infrastructure.csproj" />
+</Solution>

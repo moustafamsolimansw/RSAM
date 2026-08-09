@@ -1,0 +1,55 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "RSAM.Infrastructure/1.0.0": {
+        "dependencies": {
+          "RSAM.Application": "1.0.0"
+        },
+        "runtime": {
+          "RSAM.Infrastructure.dll": {}
+        }
+      },
+      "RSAM.Application/1.0.0": {
+        "dependencies": {
+          "RSAM.Domain": "1.0.0"
+        },
+        "runtime": {
+          "RSAM.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RSAM.Domain/1.0.0": {
+        "runtime": {
+          "RSAM.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RSAM.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RSAM.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RSAM.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
