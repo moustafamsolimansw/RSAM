@@ -5,8 +5,8 @@ E:\Projects\RSAM\RSAM.Domain\obj\Debug\net10.0\RSAM.Domain.GeneratedMSBuildEdito
 E:\Projects\RSAM\RSAM.Domain\obj\Debug\net10.0\RSAM.Domain.AssemblyInfoInputs.cache
 E:\Projects\RSAM\RSAM.Domain\obj\Debug\net10.0\RSAM.Domain.AssemblyInfo.cs
 E:\Projects\RSAM\RSAM.Domain\obj\Debug\net10.0\RSAM.Domain.csproj.CoreCompileInputs.cache
+E:\Projects\RSAM\RSAM.Domain\obj\Debug\net10.0\RSAM.Domain.sourcelink.json
 E:\Projects\RSAM\RSAM.Domain\obj\Debug\net10.0\RSAM.Domain.dll
 E:\Projects\RSAM\RSAM.Domain\obj\Debug\net10.0\refint\RSAM.Domain.dll
 E:\Projects\RSAM\RSAM.Domain\obj\Debug\net10.0\RSAM.Domain.pdb
 E:\Projects\RSAM\RSAM.Domain\obj\Debug\net10.0\ref\RSAM.Domain.dll
-E:\Projects\RSAM\RSAM.Domain\obj\Debug\net10.0\RSAM.Domain.sourcelink.json

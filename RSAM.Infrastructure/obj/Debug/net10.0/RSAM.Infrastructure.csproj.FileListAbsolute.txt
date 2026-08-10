@@ -10,9 +10,9 @@ E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Infrastructure.Gener
 E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Infrastructure.AssemblyInfoInputs.cache
 E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Infrastructure.AssemblyInfo.cs
 E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Infrastructure.sourcelink.json
 E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Inf.25B79122.Up2Date
 E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Infrastructure.dll
 E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\refint\RSAM.Infrastructure.dll
 E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Infrastructure.pdb
 E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\ref\RSAM.Infrastructure.dll
-E:\Projects\RSAM\RSAM.Infrastructure\obj\Debug\net10.0\RSAM.Infrastructure.sourcelink.json

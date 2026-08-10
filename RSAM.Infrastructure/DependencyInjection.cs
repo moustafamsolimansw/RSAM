@@ -1,15 +1,45 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using RSAM.Application.Auth.Interfaces;
+using RSAM.Application.File;
+using RSAM.Application.Repositories;
+using RSAM.Application.Time;
+using RSAM.Domain.UserAR;
+using RSAM.Domain.UserAR.ValueObjects;
+using RSAM.Infrastructure.Auth;
 using RSAM.Infrastructure.Auth.Services;
+using RSAM.Infrastructure.File;
+using RSAM.Infrastructure.Repositories;
+using RSAM.Infrastructure.Time;
+using RSAM.Infrastructure.Context;
 
 namespace RSAM.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services)
+    public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        // Add infrastructure services here
+        // Inject DbContext
+        services.AddDbContext<RSAMDbContext>(options =>
+            options.UseNpgsql(configuration.GetConnectionString(RSAMDbContext.DatabaseName), 
+                b => b.MigrationsHistoryTable("__RSAM_Migrations")));
+
+        services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.SectionName));
         services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+        services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
+        services.AddScoped<IFileStorage, FileStorage>();
+        
+        AddRepositories(services);
+        return services;
+    }
+    
+    private static IServiceCollection AddRepositories(IServiceCollection services)
+    {
+        services.AddScoped(typeof(IWriteRepository<,>), typeof(WriteRepository<,>));
+        services.AddScoped(typeof(IReadRepository<,>), typeof(ReadRepository<,>));
+        services.AddScoped<IWriteUnitOfWork, WriteUnitOfWork>();
+        services.AddScoped<IReadUnitOfWork, ReadUnitOfWork>();
         return services;
     }
 }

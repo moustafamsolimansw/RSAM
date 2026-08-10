@@ -8,9 +8,9 @@ E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.Application.GeneratedMS
 E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.Application.AssemblyInfoInputs.cache
 E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.Application.AssemblyInfo.cs
 E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.Application.csproj.CoreCompileInputs.cache
+E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.Application.sourcelink.json
 E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.App.54543832.Up2Date
 E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.Application.dll
 E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\refint\RSAM.Application.dll
 E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.Application.pdb
 E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\ref\RSAM.Application.dll
-E:\Projects\RSAM\RSAM.Application\obj\Debug\net10.0\RSAM.Application.sourcelink.json

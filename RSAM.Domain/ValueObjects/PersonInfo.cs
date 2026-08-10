@@ -14,12 +14,13 @@ public class PersonInfo : ValueObject
     public string LastNameInArabic { get; private set; }
     public DateOnly DateOfBirth { get; private set; }
     public Gender Gender { get; private set; }
+    public Address Address { get; private set; }
 
 #pragma warning disable CS8618
     private PersonInfo() { }
 #pragma warning restore CS8618
     private PersonInfo(string firstNameInEnglish, string? middleNameInEnglish, string lastNameInEnglish,
-        string firstNameInArabic, string? middleNameInArabic, string lastNameInArabic)
+        string firstNameInArabic, string? middleNameInArabic, string lastNameInArabic, DateOnly dateOfBirth, Gender gender, Address address)
     {
         FirstNameInEnglish = firstNameInEnglish;
         MiddleNameInEnglish = middleNameInEnglish;
@@ -27,12 +28,15 @@ public class PersonInfo : ValueObject
         FirstNameInArabic = firstNameInArabic;
         MiddleNameInArabic = middleNameInArabic;
         LastNameInArabic = lastNameInArabic;
+        DateOfBirth = dateOfBirth;
+        Gender = gender;
+        Address = address;
     }
     public static PersonInfo Create(string firstNameInEnglish, string? middleNameInEnglish, string lastNameInEnglish,
-        string firstNameInArabic, string? middleNameInArabic, string lastNameInArabic)
+        string firstNameInArabic, string? middleNameInArabic, string lastNameInArabic, DateOnly dateOfBirth, Gender gender, Address address)
     {
         return new PersonInfo(firstNameInEnglish, middleNameInEnglish, lastNameInEnglish,
-            firstNameInArabic, middleNameInArabic, lastNameInArabic);
+            firstNameInArabic, middleNameInArabic, lastNameInArabic, dateOfBirth, gender, address);
     }
     
     public override IEnumerable<object> GetEqualityComponents()
@@ -43,5 +47,8 @@ public class PersonInfo : ValueObject
         yield return FirstNameInArabic;
         yield return MiddleNameInArabic ?? "";
         yield return LastNameInArabic;
+        yield return DateOfBirth;
+        yield return Gender;
+        yield return Address;
     }
 }
