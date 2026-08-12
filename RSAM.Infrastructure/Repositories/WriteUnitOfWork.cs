@@ -28,7 +28,7 @@ public class WriteUnitOfWork : IWriteUnitOfWork
     }
 
     public IWriteRepository<T, TId> WriteRepository<T, TId>()
-        where T : Entity<TId>
+        where T : BaseEntity<TId>
         where TId : ValueObject
     {
         var type = typeof(T).Name;

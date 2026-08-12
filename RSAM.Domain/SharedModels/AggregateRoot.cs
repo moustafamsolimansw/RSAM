@@ -1,6 +1,6 @@
 ﻿namespace RSAM.Domain.SharedModels;
 
-public abstract class AggregateRoot<TId> : Entity<TId> where TId : notnull
+public abstract class AggregateRoot<TId> : BaseEntity<TId> where TId : notnull
 {
 #pragma warning disable CS8618
     protected AggregateRoot() { }

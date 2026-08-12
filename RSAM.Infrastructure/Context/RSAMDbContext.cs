@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using RSAM.Domain.ValueObjects;
 using RSAM.Infrastructure.Config;
 
 namespace RSAM.Infrastructure.Context;
@@ -11,7 +12,7 @@ public class RSAMDbContext : DbContext
     public const string DatabaseName = "RSAM";
 
     #region DbSets
-    
+    public DbSet<RSAM.Domain.UserAR.User> Users { get; set; }
     #endregion
 
     public RSAMDbContext(DbContextOptions<RSAMDbContext> options) : base(options)
@@ -27,6 +28,9 @@ public class RSAMDbContext : DbContext
             modelBuilder.HasDefaultSchema(DbSchema);
         }
 
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(RSAMDbContext).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(UserConfig).Assembly);
+        modelBuilder.Ignore<EmailAddress>();
+        modelBuilder.Ignore<Address>();
+        modelBuilder.Ignore<PersonInfo>();
     }
 }

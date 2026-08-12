@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace RSAM.Infrastructure.Repositories;
 
-public class WriteRepository<T, TId> : IWriteRepository<T, TId> where T : Entity<TId> where TId : ValueObject
+public class WriteRepository<T, TId> : IWriteRepository<T, TId> where T : BaseEntity<TId> where TId : ValueObject
 {
     private readonly RSAMDbContext _rsamdbContext;
     private readonly DbSet<T> _dbSet;

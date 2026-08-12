@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 namespace RSAM.Infrastructure.Repositories;
 
 public class ReadRepository<T, TId> : IReadRepository<T, TId>
-    where T : Entity<TId>
+    where T : BaseEntity<TId>
     where TId : ValueObject
 {
     private readonly RSAMDbContext _rsamdbContext;

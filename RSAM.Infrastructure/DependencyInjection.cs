@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RSAM.Application.Auth.Interfaces;
+using RSAM.Application.Events;
 using RSAM.Application.File;
 using RSAM.Application.Repositories;
 using RSAM.Application.Time;
@@ -9,10 +10,12 @@ using RSAM.Domain.UserAR;
 using RSAM.Domain.UserAR.ValueObjects;
 using RSAM.Infrastructure.Auth;
 using RSAM.Infrastructure.Auth.Services;
+using RSAM.Infrastructure.Context;
+using RSAM.Infrastructure.Events;
 using RSAM.Infrastructure.File;
 using RSAM.Infrastructure.Repositories;
 using RSAM.Infrastructure.Time;
-using RSAM.Infrastructure.Context;
+using System.Reflection;
 
 namespace RSAM.Infrastructure;
 
@@ -29,7 +32,8 @@ public static class DependencyInjection
         services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
         services.AddScoped<IFileStorage, FileStorage>();
-        
+        services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
         AddRepositories(services);
         return services;
     }

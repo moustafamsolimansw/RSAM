@@ -1,4 +1,5 @@
 ﻿using RSAM.Domain.SharedModels;
+using RSAM.Domain.UserAR.Events;
 using RSAM.Domain.UserAR.ValueObjects;
 using RSAM.Domain.ValueObjects;
 
@@ -17,5 +18,16 @@ public class User : AggregateRoot<UserId>
         Username = username;
         EmailAddress = emailAddress;
         PersonInfo = personInfo;
+        this.AddDomainEvent(CreateUserDomainEvent.Create(id.Value, username));
+    }
+    public static User Create(string username, EmailAddress emailAddress, PersonInfo personInfo)
+    {
+        return new User(UserId.CreateUnique(), username, emailAddress, personInfo);
+    }
+    public void UpdatePersonalInfo(PersonInfo personInfo, string updatedBy)
+    {
+        PersonInfo = personInfo;
+        this.AddDomainEvent(UpdateUserPersonalInfoDomainEvent.Create(this.Id.Value, this.Username, personInfo));
+        Update(updatedBy);
     }
 }

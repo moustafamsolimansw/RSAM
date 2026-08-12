@@ -3,7 +3,7 @@ using RSAM.Domain.SharedModels;
 
 namespace RSAM.Domain.Entities.Document;
 
-public sealed class Document : Entity<DocumentId>
+public sealed class Document : BaseEntity<DocumentId>
 {
     public string Name { get; private set; }
     public string ContentType { get; private set; }

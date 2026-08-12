@@ -28,7 +28,7 @@ public class ReadUnitOfWork : IReadUnitOfWork
     }
 
     public IReadRepository<T, TId> ReadRepository<T, TId>()
-        where T : Entity<TId>
+        where T : BaseEntity<TId>
         where TId : ValueObject
     {
         var type = typeof(T).Name;

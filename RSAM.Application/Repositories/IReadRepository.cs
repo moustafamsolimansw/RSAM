@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace RSAM.Application.Repositories;
 
-public interface IReadRepository<T, TId> where T : Entity<TId> where TId : ValueObject
+public interface IReadRepository<T, TId> where T : BaseEntity<TId> where TId : ValueObject
 {
     IQueryable<T> AsQueryable(bool asNoTracking = true);
 
