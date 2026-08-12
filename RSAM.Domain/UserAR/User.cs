@@ -1,4 +1,5 @@
 ﻿using RSAM.Domain.SharedModels;
+using RSAM.Domain.UserAR.Entities;
 using RSAM.Domain.UserAR.Events;
 using RSAM.Domain.UserAR.ValueObjects;
 using RSAM.Domain.ValueObjects;
@@ -10,6 +11,8 @@ public class User : AggregateRoot<UserId>
     public string Username { get; private set; }
     public EmailAddress EmailAddress { get; private set; }
     public PersonInfo PersonInfo { get; private set; }
+    private readonly List<UserCredentials> _userCredentials = new();
+    public IReadOnlyCollection<UserCredentials> UserCredentials => _userCredentials.AsReadOnly();
 #pragma warning disable CS8618
     private User() { }
 #pragma warning restore CS8618
