@@ -11,21 +11,24 @@ public class User : AggregateRoot<UserId>
     public string Username { get; private set; }
     public EmailAddress EmailAddress { get; private set; }
     public PersonInfo PersonInfo { get; private set; }
+
+    public PhoneNumber PhoneNumber { get; private set; }
     private readonly List<UserCredentials> _userCredentials = new();
     public IReadOnlyCollection<UserCredentials> UserCredentials => _userCredentials.AsReadOnly();
 #pragma warning disable CS8618
     private User() { }
 #pragma warning restore CS8618
-    private User(UserId id, string username, EmailAddress emailAddress, PersonInfo personInfo) : base(id)
+    private User(UserId id, string username, EmailAddress emailAddress, PersonInfo personInfo, PhoneNumber phoneNumber) : base(id)
     {
         Username = username;
         EmailAddress = emailAddress;
         PersonInfo = personInfo;
+        PhoneNumber = phoneNumber;
         this.AddDomainEvent(CreateUserDomainEvent.Create(id.Value, username));
     }
-    public static User Create(string username, EmailAddress emailAddress, PersonInfo personInfo)
+    public static User Create(string username, EmailAddress emailAddress, PersonInfo personInfo, PhoneNumber phoneNumber)
     {
-        return new User(UserId.CreateUnique(), username, emailAddress, personInfo);
+        return new User(UserId.CreateUnique(), username, emailAddress, personInfo, phoneNumber);
     }
     public void UpdatePersonalInfo(PersonInfo personInfo, string updatedBy)
     {

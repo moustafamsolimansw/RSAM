@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/.claude/">
+    <File Path="CLAUDE.md" />
+  </Folder>
   <Project Path="RSAM.Api/RSAM.Api.csproj" />
   <Project Path="RSAM.Application/RSAM.Application.csproj" />
   <Project Path="RSAM.Contracts/RSAM.Contracts.csproj" />
