@@ -45,9 +45,13 @@ public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<AuthResult>
         }
 
         // Generate the JWT token
+        var accessToken = _jwtTokenGenerator.GenerateToken(existingUser);
+
+        // Generate the refresh token
 
         // Update the refresh token in the database
 
         // return the result
+        return new AuthResult(accessToken, "refreshToken", DateTime.UtcNow.AddHours(1));
     }
 }

@@ -28,6 +28,9 @@ public class UserConfig : IEntityTypeConfiguration<User>
             person.Property(p => p.Gender).HasColumnName("Gender").HasConversion<string>().HasMaxLength(20).IsRequired();
             person.Property(p => p.DateOfBirth).HasColumnName("DateOfBirth").IsRequired();
         });
-        
+        builder.ComplexProperty(u => u.PhoneNumber, phone =>
+        {
+            phone.Property(p => p.Value).HasColumnName("PhoneNumber").HasMaxLength(20).IsRequired();
+        });
     }
 }

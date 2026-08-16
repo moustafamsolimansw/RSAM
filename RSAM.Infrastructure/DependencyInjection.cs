@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using RSAM.Application.Auth.Interfaces;
 using RSAM.Application.Events;
 using RSAM.Application.File;
+using RSAM.Application.Helpers;
 using RSAM.Application.Repositories;
 using RSAM.Application.Time;
 using RSAM.Domain.UserAR;
@@ -35,11 +36,14 @@ public static class DependencyInjection
         services.AddScoped<IDomainEventDispatcher, MediatRDomainEventDispatcher>();
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
         AddRepositories(services);
+        services.AddTransient<IOtpGeneator, OtpGenerator>();
         return services;
     }
     
     private static IServiceCollection AddRepositories(IServiceCollection services)
     {
+        services.AddScoped<IWriteRepository<User, UserId>, WriteUserRepository>();
+        services.AddScoped<IWriteUserRepositry, WriteUserRepository>();
         services.AddScoped(typeof(IWriteRepository<,>), typeof(WriteRepository<,>));
         services.AddScoped(typeof(IReadRepository<,>), typeof(ReadRepository<,>));
         services.AddScoped<IWriteUnitOfWork, WriteUnitOfWork>();

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using RSAM.Infrastructure.Context;
@@ -12,9 +13,11 @@ using RSAM.Infrastructure.Context;
 namespace RSAM.Infrastructure.Migrations
 {
     [DbContext(typeof(RSAMDbContext))]
-    partial class RSAMDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260816073915_userOTP")]
+    partial class userOTP
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,9 +109,6 @@ namespace RSAM.Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
-                    b.Property<bool>("IsUsed")
-                        .HasColumnType("boolean");
-
                     b.Property<string>("Purpose")
                         .IsRequired()
                         .HasColumnType("text");
@@ -123,8 +123,6 @@ namespace RSAM.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("UserOTPs", "public");
                 });
@@ -270,20 +268,9 @@ namespace RSAM.Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("RSAM.Domain.UserAR.Entities.UserOTP", b =>
-                {
-                    b.HasOne("RSAM.Domain.UserAR.User", null)
-                        .WithMany("UserOTPs")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("RSAM.Domain.UserAR.User", b =>
                 {
                     b.Navigation("UserCredentials");
-
-                    b.Navigation("UserOTPs");
                 });
 #pragma warning restore 612, 618
         }

@@ -15,6 +15,9 @@ public class User : AggregateRoot<UserId>
     public PhoneNumber PhoneNumber { get; private set; }
     private readonly List<UserCredentials> _userCredentials = new();
     public IReadOnlyCollection<UserCredentials> UserCredentials => _userCredentials.AsReadOnly();
+
+    private readonly List<UserOTP> _userOTPs = new();
+    public IReadOnlyCollection<UserOTP> UserOTPs => _userOTPs.AsReadOnly();
 #pragma warning disable CS8618
     private User() { }
 #pragma warning restore CS8618
@@ -36,4 +39,17 @@ public class User : AggregateRoot<UserId>
         this.AddDomainEvent(UpdateUserPersonalInfoDomainEvent.Create(this.Id.Value, this.Username, personInfo));
         Update(updatedBy);
     }
+    public void AddUserCredential(UserCredentials userCredentials, string updatedBy)
+    {
+        _userCredentials.Add(userCredentials);
+        this.AddDomainEvent(AddUserCredentialDomainEvent.Create(this.Id.Value, this.Username));
+        Update(updatedBy);
+    }
+    public void AddUserOTP(UserOTP userOTP, string updatedBy)
+    {
+        _userOTPs.Add(userOTP);
+        this.AddDomainEvent(AddUserOTPDomainEvent.Create(this.Id.Value, this.Username, userOTP.Purpose, userOTP.Channel));
+        Update(updatedBy);
+    }
+    
 }

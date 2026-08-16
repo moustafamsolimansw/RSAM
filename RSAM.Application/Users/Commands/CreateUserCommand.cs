@@ -19,5 +19,6 @@ public record CreateUserCommand
     string street,
     string city,
     string state,
-    string country
+    string country,
+    string phoneNumber
 ) : IRequest<ErrorOr<UserDto>>;

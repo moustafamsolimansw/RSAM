@@ -59,7 +59,8 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Error
                     command.state,
                     command.country
                 ) 
-            )
+            ),
+            PhoneNumber.Create(command.phoneNumber)
         );
 
         await _writeUserRepository.AddAsync(user, cancellationToken);
