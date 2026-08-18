@@ -7,4 +7,5 @@ namespace RSAM.Application.Repositories;
 public interface IWriteUserRepositry : IWriteRepository<User, UserId>
 {
     Task UpdateUserOtp(UserId userId, string hashedOtp, OTPPurpose oTPPurpose, OTPChannel oTPChannel, CancellationToken cancellationToken);
+    Task UpdateUserPhoneNumber(User user, string phoneNumber, CancellationToken cancellationToken);
 }

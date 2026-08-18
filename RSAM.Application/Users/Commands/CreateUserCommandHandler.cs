@@ -71,7 +71,9 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Error
             user.Id.Value,
             user.EmailAddress.Value,
             user.PersonInfo.FirstNameInEnglish,
-            user.PersonInfo.LastNameInEnglish
+            user.PersonInfo.LastNameInEnglish,
+            user.Username,
+            user.PhoneNumber.Value
         );
     }
 }

@@ -39,6 +39,8 @@ public class User : AggregateRoot<UserId>
         this.AddDomainEvent(UpdateUserPersonalInfoDomainEvent.Create(this.Id.Value, this.Username, personInfo));
         Update(updatedBy);
     }
+    public void UpdatePhoneNumber(PhoneNumber phoneNumber) => PhoneNumber = phoneNumber;
+
     public void AddUserCredential(UserCredentials userCredentials, string updatedBy)
     {
         _userCredentials.Add(userCredentials);

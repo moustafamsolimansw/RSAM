@@ -7,6 +7,7 @@ using RSAM.Domain.UserAR;
 using RSAM.Domain.UserAR.Entities;
 using RSAM.Domain.UserAR.Enums;
 using RSAM.Domain.UserAR.ValueObjects;
+using RSAM.Domain.ValueObjects;
 using RSAM.Infrastructure.Auth;
 using RSAM.Infrastructure.Context;
 
@@ -60,5 +61,11 @@ public class WriteUserRepository : WriteRepository<User, UserId> ,IWriteUserRepo
             _logger.LogError(ex.Message, ex.GetBaseException());
         }
         
+    }
+
+    public async Task UpdateUserPhoneNumber(User user, string phoneNumber, CancellationToken cancellationToken)
+    {
+        user.UpdatePhoneNumber(PhoneNumber.Create(phoneNumber));
+
     }
 }

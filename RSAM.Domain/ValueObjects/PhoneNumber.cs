@@ -26,12 +26,12 @@ public sealed class PhoneNumber : ValueObject
                 nameof(value));
 
         value = Normalize(value);
-
+        /*
         if (!PhoneNumberRegex.IsMatch(value))
             throw new ArgumentException(
                 $"Invalid phone number: {value}",
                 nameof(value));
-
+        */
         return new PhoneNumber(value);
     }
     private static string Normalize(string value)

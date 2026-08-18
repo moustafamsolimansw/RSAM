@@ -24,7 +24,10 @@ public class JwtTokenGenerator : IJwtTokenGenerator
     {
         var secret = !string.IsNullOrEmpty(_jwtSettings.Secret) 
             ? _jwtSettings.Secret 
-            : "your_secret_key_here"; // Fallback just in case
+            : "your_secret_key_here";
+        var issuer = !string.IsNullOrEmpty(_jwtSettings.Issuer) ? _jwtSettings.Issuer : "RSAM";
+        var audience = !string.IsNullOrEmpty(_jwtSettings.Audience) ? _jwtSettings.Audience : "RSAM";
+        var expirationMinutes = _jwtSettings.AccessTokenExpiration > 0 ? _jwtSettings.AccessTokenExpiration : 60;
 
         var signingCredentials = new SigningCredentials(
             new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret)), 
@@ -39,10 +42,10 @@ public class JwtTokenGenerator : IJwtTokenGenerator
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
         };
         var token = new JwtSecurityToken(
-            issuer: _jwtSettings.Issuer,
-            audience: _jwtSettings.Audience,
+            issuer: issuer,
+            audience: audience,
             claims: claims,
-            expires: _dateTimeProvider.UtcNow.AddMinutes(_jwtSettings.AccessTokenExpiration),
+            expires: _dateTimeProvider.UtcNow.AddMinutes(expirationMinutes),
             signingCredentials: signingCredentials
         );
         return new JwtSecurityTokenHandler().WriteToken(token);

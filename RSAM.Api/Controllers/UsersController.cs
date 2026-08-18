@@ -1,15 +1,19 @@
-﻿using MediatR;
+﻿using Asp.Versioning;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RSAM.Application.Repositories;
 using RSAM.Application.Users.Commands;
 using RSAM.Application.Users.Queries;
+using RSAM.Contracts.Users.Commands;
 using RSAM.Domain.UserAR;
 using RSAM.Domain.UserAR.ValueObjects;
 
 namespace RSAM.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Asp.Versioning.ApiVersion(1.0)]
+    [Route("api/v{version:apiVersion}/users")]
     [ApiController]
     public class UsersController : ControllerBase
     {
@@ -23,7 +27,7 @@ namespace RSAM.Api.Controllers
             _userRepository = userRepository;
             _logger = logger;
         }
-        [HttpPost("create")]
+        [HttpPost()]
         public async Task<IActionResult> CreateUser(CreateUserCommand command)
         {
             try
@@ -35,6 +39,21 @@ namespace RSAM.Api.Controllers
             {
                 _logger.LogError(ex, "An error occurred while creating user.");
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while processing your request.");
+            }
+        }
+        [Authorize]
+        [HttpGet()]
+        public async Task<IActionResult> GetUsers([FromQuery]GetUsersQuery query)
+        {
+            try 
+            {
+                var result = await _mediator.Send(query);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Cant get users list");
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
         [HttpPost("login")]
@@ -80,5 +99,47 @@ namespace RSAM.Api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while processing your reset password request");
             }
         }
+
+        #region UPDATE
+        [Authorize]
+        [HttpPatch("update-phone-number/{userId}")]
+        public async Task<IActionResult> UpdatePhoneNumber(string userId, UpdateUserPhoneNumberRequest request)
+        {
+            try 
+            {
+                var userIdAsGuid = Guid.TryParse(userId, out Guid userIdCasted);
+                var command = new UpdateUserPhoneNumberCommand(userIdCasted, request.PhoneNumber);
+                var result = await _mediator.Send(command);
+                return Ok(result);
+            } 
+            catch (Exception ex) 
+            { 
+                _logger.LogError($"Error: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        [Authorize]
+        [HttpPatch("update-personal-info/{userId}")]
+        public async Task<IActionResult> UpdatePersonalInfo(string userId, UpdateUserPersonalInfoRequest request)
+        {
+            try
+            {
+                var userIdAsGuid = Guid.TryParse(userId, out Guid userIdCasted);
+
+                AddressDto address = new AddressDto(request.Street, request.City, request.State, request.Country);
+                var command = new UpdatePersonalInfoCommand(userIdCasted, request.FirstNameInEnglish,
+                    request.MiddleNameInEnglish, request.LastNameInEnglish, request.FirstNameInArabic,
+                    request.MiddleNameInArabic, request.LastNameInArabic, request.DateOfBirth, request.Gender, address);
+                var result = await _mediator.Send(command);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Error: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+        #endregion
     }
 }
